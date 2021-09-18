@@ -1,0 +1,83 @@
+header:
+    version: 10
+distro: tdx-xwayland
+machine: verdin-imx8mm
+build_system: oe
+target: tdx-reference-multimedia-image
+
+repos:
+    openembedded-core:
+        url: "https://github.com/openembedded/openembedded-core.git"
+        refspec: "dunfell"
+        path: "layers/openembedded-core"
+        layers:
+            meta:
+    bitbake:
+        url: "https://github.com/openembedded/bitbake.git"
+        refspec: "1.46"
+        path: "layers/openembedded-core/bitbake"
+        layers:
+            bitbake: excluded
+    meta-openembedded:
+        url: "https://github.com/openembedded/meta-openembedded.git"
+        refspec: "dunfell"
+        path: "layers/meta-openembedded"
+        layers:
+            meta-oe:
+            meta-filesystems:
+            meta-gnome:
+            meta-xfce:
+            meta-initramfs:
+            meta-networking:
+            meta-multimedia:
+            meta-python:
+    meta-yocto:
+        url: "https://git.yoctoproject.org/git/meta-yocto.git"
+        refspec: "dunfell"
+        path: "layers/meta-yocto"
+        layers:
+            meta-poky:
+    meta-freescale-3rdparty:
+        url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
+        refspec: "dunfell"
+        path: "layers/meta-freescale-3rdparty"
+    meta-freescale-distro:
+        url: "https://github.com/Freescale/meta-freescale-distro.git"
+        refspec: "dunfell"
+        path: "layers/meta-freescale-distro"
+    meta-freescale:
+        url: "https://github.com/Freescale/meta-freescale.git"
+        refspec: "dunfell"
+        path: "layers/meta-freescale"
+    meta-toradex-bsp-common:
+        url: "https://git.toradex.com/meta-toradex-bsp-common.git"
+        refspec: "dunfell-5.x.y"
+        path: "layers/meta-toradex-bsp-common"
+    meta-toradex-nxp:
+        url: "https://git.toradex.com/meta-toradex-nxp.git"
+        refspec: "dunfell-5.x.y"
+        path: "layers/meta-toradex-nxp"
+    meta-qt5:
+        url: "https://github.com/meta-qt5/meta-qt5.git"
+        refspec: "dunfell"
+        path: "layers/meta-qt5"
+    meta-toradex-demos:
+        url: "https://git.toradex.com/meta-toradex-demos.git"
+        refspec: "dunfell-5.x.y"
+        path: "layers/meta-toradex-demos"
+    meta-toradex-distro:
+        url: "https://git.toradex.com/meta-toradex-distro.git"
+        refspec: "dunfell-5.x.y"
+        path: "layers/meta-toradex-distro"
+
+bblayers_conf_header:
+    custom-bblayers-conf: |
+        POKY_BBLAYERS_CONF_VERSION = "1"
+        BBPATH = "${TOPDIR}"
+        BBFILES ?= ""
+
+local_conf_header:
+    custom-local-conf: |
+        ACCEPT_FSL_EULA = "1"
+        DL_DIR = "/work/downloads"
+        SSTATE_DIR = "/work/sstate-cache"
