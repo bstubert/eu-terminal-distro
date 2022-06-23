@@ -1,8 +1,8 @@
 header:
-    version: 10
+    version: 11
 distro: tdx-xwayland
-machine: verdin-imx8mm
 build_system: oe
+machine: verdin-imx8mp
 target: tdx-reference-multimedia-image
 
 repos:
@@ -73,8 +73,6 @@ repos:
 bblayers_conf_header:
     custom-bblayers-conf: |
         POKY_BBLAYERS_CONF_VERSION = "1"
-        BBPATH = "${TOPDIR}"
-        BBFILES ?= ""
 
 local_conf_header:
     custom-local-conf: |
