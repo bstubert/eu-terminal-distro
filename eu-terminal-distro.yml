@@ -8,19 +8,19 @@ target: tdx-reference-multimedia-image
 repos:
     openembedded-core:
         url: "https://github.com/openembedded/openembedded-core.git"
-        refspec: "dunfell"
+        refspec: "add860e1a69f848097bbc511137a62d5746e5019"
         path: "layers/openembedded-core"
         layers:
             meta:
     bitbake:
         url: "https://github.com/openembedded/bitbake.git"
-        refspec: "1.46"
+        refspec: "0784db7dd0fef6f0621ad8d74372f44e87fef950"
         path: "layers/openembedded-core/bitbake"
         layers:
             bitbake: excluded
     meta-openembedded:
         url: "https://github.com/openembedded/meta-openembedded.git"
-        refspec: "dunfell"
+        refspec: "8ff12bfffcf0840d5518788a53d88d708ad3aae0"
         path: "layers/meta-openembedded"
         layers:
             meta-oe:
@@ -33,41 +33,41 @@ repos:
             meta-python:
     meta-yocto:
         url: "https://git.yoctoproject.org/git/meta-yocto.git"
-        refspec: "dunfell"
+        refspec: "7e0063a8546250c4c5b9454cfa89fff451a280ee"
         path: "layers/meta-yocto"
         layers:
             meta-poky:
     meta-freescale-3rdparty:
         url: "https://github.com/Freescale/meta-freescale-3rdparty.git"
-        refspec: "dunfell"
+        refspec: "c52f64973cd4043a5e8be1c7e29bb9690eb4c3e5"
         path: "layers/meta-freescale-3rdparty"
     meta-freescale-distro:
         url: "https://github.com/Freescale/meta-freescale-distro.git"
-        refspec: "dunfell"
+        refspec: "5d882cdf079b3bde0bd9869ce3ca3db411acbf3b"
         path: "layers/meta-freescale-distro"
     meta-freescale:
         url: "https://github.com/Freescale/meta-freescale.git"
-        refspec: "dunfell"
+        refspec: "3cb29cff92568ea835ef070490f185349d712837"
         path: "layers/meta-freescale"
     meta-toradex-bsp-common:
         url: "https://git.toradex.com/meta-toradex-bsp-common.git"
-        refspec: "dunfell-5.x.y"
+        refspec: "54c48da8942137b75c35fa6eb850f62fbbeb6bc9"
         path: "layers/meta-toradex-bsp-common"
     meta-toradex-nxp:
         url: "https://git.toradex.com/meta-toradex-nxp.git"
-        refspec: "dunfell-5.x.y"
+        refspec: "cc4048ba326cb86cbf2631d5b31b415eb318ce82"
         path: "layers/meta-toradex-nxp"
     meta-qt5:
         url: "https://github.com/meta-qt5/meta-qt5.git"
-        refspec: "dunfell"
+        refspec: "5ef3a0ffd3324937252790266e2b2e64d33ef34f"
         path: "layers/meta-qt5"
     meta-toradex-demos:
         url: "https://git.toradex.com/meta-toradex-demos.git"
-        refspec: "dunfell-5.x.y"
+        refspec: "6d6951d053ff1a7347af0ac04fcbb72564a28954"
         path: "layers/meta-toradex-demos"
     meta-toradex-distro:
         url: "https://git.toradex.com/meta-toradex-distro.git"
-        refspec: "dunfell-5.x.y"
+        refspec: "cbde0286cb85bc445e70210b8df38f29b4784c08"
         path: "layers/meta-toradex-distro"
 
 bblayers_conf_header:
